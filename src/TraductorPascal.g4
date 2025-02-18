@@ -11,7 +11,7 @@ sentlist ::= sent | sentlist sent
 */
 prg: 'program' ID ';' blq '.';
 blq: dcllist 'begin' sentlist 'end';
-dcllist: /* ʎ */ | dcllist dcl;
+dcllist:  | dcllist dcl;
 sentlist: sent | sentlist sent;
 
 
@@ -46,7 +46,7 @@ defvarlist: varlist ':' tbas
 varlist: ID | ID ',' varlist;
 defproc: 'procedure' ID formal_paramlist ';' blq ';';
 deffun: 'function' ID formal_paramlist ':' tbas ';' blq ';';
-formal_paramlist: /* ʎ */ | '(' formal_param ')';
+formal_paramlist:  | '(' formal_param ')';
 formal_param: varlist ':' tbas
             | varlist ':' tbas ';' formal_param;
 tbas: 'INTEGER' | 'REAL';
@@ -71,7 +71,7 @@ exp: exp op exp | factor;
 op: oparit;
 oparit: '+' | '-' | '*' | 'div' | 'mod';
 factor: simpvalue | '(' exp ')' | ID subparamlist;
-subparamlist: /* ʎ */ | '(' explist ')';
+subparamlist:  | '(' explist ')';
 explist: exp | exp ',' explist;
 proc_call: ID subparamlist;
 
