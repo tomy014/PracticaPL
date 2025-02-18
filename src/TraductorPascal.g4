@@ -41,3 +41,27 @@ explist: exp | exp ',' explist;
 proc_call: ID subparamlist;
 
 
+
+// Zona de léxicos
+
+fragment
+Letras: [a-no-zA-NO-Z];
+fragment
+Puntuacion: [!-?];
+fragment
+Numeros: [0-9];
+
+IDENTIFIER : (Letras|'_')(Letras|Numeros|'_')*;
+
+NUMERIC_INTEGER_CONST: [+-]?Numeros+;
+
+NUMERIC_REAL_CONST: [+-]?(Numeros*'.'Numeros*|Numeros*[eE][+-]?Numeros*|Numeros*'.'Numeros*[eE][+-]?Numeros*);
+
+STRING_CONST: ('\'' (Letras|'"'|'\'\''|' '|Puntuacion)* '\''|'"'(Letras|'\''|'""'|' '|Puntuacion)*'"');
+
+LINE: '{' ~('\r'|'\n'|'}')* '}' -> skip;
+
+COMMENT: '(*' ( '*' ~[)] | ~[*] )* '*)' -> skip;
+
+IGNORE : ('\r'|'\n'|'\t'|' ') -> skip;
+
