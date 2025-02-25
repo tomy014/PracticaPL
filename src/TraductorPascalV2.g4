@@ -1,4 +1,4 @@
-grammar TraductorPascal;
+grammar TraductorPascalV2;
 
 // REGLAS SINTÁCTICAS
 
@@ -13,18 +13,16 @@ sentlist: sent sentlist | ;
 // Zona de declaraciones
 dcl: defcte | defvar | defproc | deffun;
 defcte: 'const' ctelist;
-ctelist: ID '=' simpvalue ';'
-       | ctelist ID '=' simpvalue ';';
-simpvalue: CONSTINT | CONSTREAL | CONSTLIT;
+ctelist: ID '=' simpvalue ';' ctelist | ID '=' simpvalue ';';
+simpvalue: CONSTLIT | CONSTREAL | CONSTINT;
 defvar: 'var' defvarlist ';';
-defvarlist: varlist ':' tbas
-          | defvarlist ';' varlist ':' tbas;
-varlist: ID | ID ',' varlist;
+defvarlist: varlist ':' tbas ';' defvarlist | varlist ':' tbas;
+varlist: ID ',' varlist | ID;
 defproc: 'procedure' ID formal_paramlist ';' blq ';';
 deffun: 'function' ID formal_paramlist ':' tbas ';' blq ';';
-formal_paramlist:  | '(' formal_param ')';
-formal_param: varlist ':' tbas
-            | varlist ':' tbas ';' formal_param;
+formal_paramlist: '(' formal_param formal_param_tail ')' | ;
+formal_param_tail: ';' formal_param formal_param_tail | ;
+formal_param: varlist ':' tbas;
 tbas: 'INTEGER' | 'REAL';
 
 
