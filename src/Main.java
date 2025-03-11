@@ -4,8 +4,37 @@ import org.antlr.v4.runtime.*;
 
 public class Main {
     public static void main(String[] args) {
-        StringBuilder output = new StringBuilder();
+        /*Transformar el archivo que recibe como parámetro (un fichero .pas) por el fichero resultante .c
+         *
+         */
+        try {
+            // Fichero de entrada
+            CharStream input = CharStreams.fromFileName(args[0]);
+            // Analizador léxico
+            TraductorPascalLexer analex = new TraductorPascalLexer(input);
+            // Fuente de tokens
+            CommonTokenStream tokens = new CommonTokenStream(analex);
+            // Analizador sintáctico
+            TraductorPascalParser anasint = new TraductorPascalParser(tokens, args[0]);
 
-        System.out.println("Hello, World!");
+
+            StringBuilder output = new StringBuilder();
+            // Generar el código en C
+            String name = args[0] + ".c";
+            FileOutputStream file = new FileOutputStream(name);
+            System.setOut(new PrintStream(file));
+
+            //Llamar al método de la gramática
+            anasint.prg();
+        }
+        catch (org.antlr.v4.runtime.RecognitionException e){//Error de reconocimiento en la entrada
+            System.err.println("Error (ANTLr): " + e.getMessage());
+        }
+        catch (IOException e){//Error de entrada/salida
+            System.err.println("Error (IO): " + e.getMessage());
+        }
+        catch (Exception e){ //Error genérico
+            System.err.println("Error (Test): " + e);
+        }
     }
 }

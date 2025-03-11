@@ -54,3 +54,11 @@ LINE: '{' ~('}')* '}' -> skip;
 COMMENT: '(*' .*? '*)' -> skip;
 
 IGNORE: [ \t\r\n]+ -> skip;
+
+
+//Parte opcional
+// Zona de sentencias de control de flujo
+
+
+// Zona de librerías y programas
+
