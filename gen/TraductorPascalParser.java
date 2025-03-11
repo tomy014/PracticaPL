@@ -95,7 +95,7 @@ public class TraductorPascalParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public TraductorPascalParser(TokenStream input, String arg) {
+	public TraductorPascalParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
