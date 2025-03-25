@@ -6,7 +6,7 @@ grammar TraductorPascal;
 prg: 'program' ID ';' blq '.' { System.out.println("#include <stdio.h>\nint main() {"); };
 blq: dcllist 'begin' sentlist 'end' { System.out.println("return 0;\n}"); };
 dcllist: dcl dcllist | ;
-sentlist: sent sentlist | ;
+sentlist: sent sentlist | sent;
 
 
 
@@ -43,8 +43,8 @@ fragment Digitos: [0-9];
 
 ID: Letras (Letras | Digitos | '_')*;
 CONSTINT: [+-]? Digitos+;
-CONSTREAL: [+-]? Digitos* '.' Digitos+ ([eE] [+-]? Digitos+)?;
-CONSTLIT: '\'' (~['\r\n])* '\'';
+CONSTREAL: [+-]? Digitos+ '.' Digitos+ ([eE] [+-]? Digitos+)? | [eE]+ ([+-]? Digitos+)?; //para permitir que exista solo exponencial
+CONSTLIT: '\'' (~['\r\n\\])* '\''; //corregir que permita una barra en el comentario
 
 // Ignorar comentarios y espacios en blanco
 LINE: '{' ~('}')* '}' -> skip;
