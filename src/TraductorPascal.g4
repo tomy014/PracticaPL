@@ -1,5 +1,7 @@
 grammar TraductorPascal;
 
+//Empezar traducción!!!!!!!!
+
 // REGLAS SINTÁCTICAS
 
 // Programa principal
@@ -8,7 +10,8 @@ blq: dcllist 'begin' sentlist 'end' { System.out.println("return 0;\n}"); };
 dcllist: dcl dcllist | ;
 sentlist: sent sentlist | sent;
 
-
+//COMPROBAR QUE SEA LL(1).
+// (Comprobado y es correcto¿?)
 
 // Zona de declaraciones
 dcl: defcte | defvar | defproc | deffun;
@@ -44,7 +47,8 @@ fragment Digitos: [0-9];
 ID: Letras (Letras | Digitos | '_')*;
 CONSTINT: [+-]? Digitos+;
 CONSTREAL: [+-]? Digitos+ '.' Digitos+ ([eE] [+-]? Digitos+)? | [eE]+ ([+-]? Digitos+)?; //para permitir que exista solo exponencial
-CONSTLIT: '\'' (~['\r\n\\])* '\''; //corregir que permita una barra en el comentario
+//CONSTLIT: '\'' (~['\r\n])* '\''; //corregir que permita una barra en el comentario
+CONSTLIT: '\'' ( ~[\\'\r\n] | '\\\'')* '\'';
 
 // Ignorar comentarios y espacios en blanco
 LINE: '{' ~('}')* '}' -> skip;
