@@ -32,7 +32,7 @@ asig returns[String s] : ID ':=' exp { System.out.println($ID.text + " = " + $ex
 exp: exp op exp | factor;
 op: oparit;
 oparit returns[String s] : '+' {$s = "+"} | '-' {$s = "-"} | '*' {$s = "*"} | 'div' {$s = "/"}  | 'mod' {$s = "%"} ;
-factor returns[String s] : simpvalue {$s = $simpvalue.s;} | '(' exp ')' {$s = "("+$exp.s+")";} | ID subparamlist {$s = $ID.text + $subparamlist.s;};
+factor returns[String s] : simpvalue {$s = $simpvalue.text;} | '(' exp ')' {$s = "("+$exp.text+")";} | ID subparamlist {$s = $ID.text + $subparamlist.text;};
 subparamlist returns[String s] : '(' explist ')' {$s = "("+$explist.s+")";} | {$s = "";};
 explist returns[String s] : exp | exp ',' explist;
 proc_call returns[String s] : ID subparamlist { $s = $ID.text + $subparamlist.s;};
