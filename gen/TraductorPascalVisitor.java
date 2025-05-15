@@ -16,6 +16,18 @@ public interface TraductorPascalVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrg(TraductorPascalParser.PrgContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#programa}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPrograma(TraductorPascalParser.ProgramaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#libreria}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLibreria(TraductorPascalParser.LibreriaContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link TraductorPascalParser#blq}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -27,24 +39,6 @@ public interface TraductorPascalVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitDcllist(TraductorPascalParser.DcllistContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link TraductorPascalParser#dcllistP}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDcllistP(TraductorPascalParser.DcllistPContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link TraductorPascalParser#sentlist}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSentlist(TraductorPascalParser.SentlistContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link TraductorPascalParser#sentlistP}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSentlistP(TraductorPascalParser.SentlistPContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link TraductorPascalParser#dcl}.
 	 * @param ctx the parse tree
@@ -142,11 +136,83 @@ public interface TraductorPascalVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTbas(TraductorPascalParser.TbasContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#sentlist}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSentlist(TraductorPascalParser.SentlistContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#sentlistP}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSentlistP(TraductorPascalParser.SentlistPContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link TraductorPascalParser#sent}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitSent(TraductorPascalParser.SentContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#blq_or_sent}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlq_or_sent(TraductorPascalParser.Blq_or_sentContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#if_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_stmt(TraductorPascalParser.If_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#while_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile_stmt(TraductorPascalParser.While_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#repeat_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRepeat_stmt(TraductorPascalParser.Repeat_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#for_stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFor_stmt(TraductorPascalParser.For_stmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#inc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInc(TraductorPascalParser.IncContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#expcond}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpcond(TraductorPascalParser.ExpcondContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#oplog}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOplog(TraductorPascalParser.OplogContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#factorcond}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFactorcond(TraductorPascalParser.FactorcondContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link TraductorPascalParser#opcomp}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOpcomp(TraductorPascalParser.OpcompContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link TraductorPascalParser#asig}.
 	 * @param ctx the parse tree

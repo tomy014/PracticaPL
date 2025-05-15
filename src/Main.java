@@ -15,7 +15,8 @@ public class Main {
             // Declaramos los tokens
             CommonTokenStream tokens = new CommonTokenStream(analex);
             // Analizador sintáctico
-            TraductorPascalParser anasint = new TraductorPascalParser(tokens);
+            TraductorPascalParser anasint = new TraductorPascalParser(tokens, args[0]);
+            // Ahora puede recibir el fichero por parámetro
 
 
             StringBuilder output = new StringBuilder();
