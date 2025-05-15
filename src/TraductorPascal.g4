@@ -1,9 +1,11 @@
 grammar TraductorPascal;
 
 // Programa principal
-prg: 'program' ID ';' blq '.' { System.out.println("#include <stdio.h>
-int main() {"); System.out.println($blq.s); System.out.println("return 0;
-}"); };
+prg: 'program' ID ';' blq '.' {
+    System.out.println("#include <stdio.h>\n int main() {");
+    System.out.println($blq.s);
+    System.out.println("return 0;\n}");
+};
 blq returns [String s]: dcllist 'begin' sentlist 'end' { $s = $dcllist.s + $sentlist.s; };
 dcllist returns [String s]: dcl dcllistP { $s = $dcl.s + $dcllistP.s; };
 dcllistP returns [String s]: dcl dcllistP { $s = $dcl.s + $dcllistP.s; } | { $s = ""; };
@@ -16,29 +18,20 @@ dcl returns [String s]
     | defvar { $s = $defvar.s; }
     | defproc { $s = $defproc.s; }
     | deffun { $s = $deffun.s; };
-defcte returns [String s]: 'const' ctelist { $s = "// Const declarations
-" + $ctelist.s; System.out.println($s); };
-ctelist returns [String s]: ID '=' simpvalue ';' ctelistP { $s = "const " + $ID.text + " = " + $simpvalue.text + ";
-" + $ctelistP.s; };
-ctelistP returns [String s]: ID '=' simpvalue ';' ctelistP { $s = "const " + $ID.text + " = " + $simpvalue.text + ";
-" + $ctelistP.s; } | { $s = ""; };
+defcte returns [String s]: 'const' ctelist { $s = $ctelist.s; System.out.println($s); };
+ctelist returns [String s]: ID '=' simpvalue ';' ctelistP { $s = "const " + $ID.text + " = " + $simpvalue.text + ";\n" + $ctelistP.s; };
+ctelistP returns [String s]: ID '=' simpvalue ';' ctelistP { $s = "const " + $ID.text + " = " + $simpvalue.text + ";\n" + $ctelistP.s; } | { $s = ""; };
 simpvalue: CONSTLIT | CONSTREAL | CONSTINT;
 defvar returns [String s]: 'var' defvarlist ';' { $s = $defvarlist.s + ";"; System.out.println($s); };
-defvarlist returns [String s]: varlist ':' tbas ';' defvarlistP { $s = $tbas.s + " " + $varlist.s + ";
-" + $defvarlistP.s; };
-defvarlistP returns [String s]: varlist ':' tbas ';' defvarlistP { $s = $tbas.s + " " + $varlist.s + ";
-" + $defvarlistP.s; } | { $s = ""; };
+defvarlist returns [String s]: varlist ':' tbas ';' defvarlistP { $s = $tbas.s + " " + $varlist.s + ";\n" + $defvarlistP.s; };
+defvarlistP returns [String s]: varlist ':' tbas ';' defvarlistP { $s = $tbas.s + " " + $varlist.s + ";\n" + $defvarlistP.s; } | { $s = ""; };
 varlist returns [String s]: ID varlistP { $s = $ID.text + $varlistP.s; };
 varlistP returns [String s]: ',' ID varlistP { $s = ", " + $ID.text + $varlistP.s; } | { $s = ""; };
 defproc returns [String s]: 'procedure' ID formal_paramlist ';' blq ';' {
-  $s = "void " + $ID.text + $formal_paramlist.s + " {
-" + $blq.s + "}
-";
+  $s = "void " + $ID.text + $formal_paramlist.s + " {\n" + $blq.s + "}\n";
 };
 deffun returns [String s]: 'function' ID formal_paramlist ':' tbas ';' blq ';' {
-  $s = $tbas.s + " " + $ID.text + $formal_paramlist.s + " {
-" + $blq.s + "}
-";
+  $s = $tbas.s + " " + $ID.text + $formal_paramlist.s + " {\n" + $blq.s + "}\n";
 };
 formal_paramlist returns [String s]: '(' formal_param formal_param_tail ')' { $s = "(" + $formal_param.s + ")"; } | { $s = "()"; };
 formal_param_tail returns [String s]: ';' formal_param formal_param_tail { $s = ", " + $formal_param.s + $formal_param_tail.s; } | { $s = ""; };
@@ -46,9 +39,7 @@ formal_param returns [String s]: varlist ':' tbas { $s = $tbas.s + " " + $varlis
 tbas returns [String s]: 'INTEGER' { $s = "int"; } | 'REAL' { $s = "float"; };
 
 // Zona de sentencias
-sent returns [String s]: asig ';' { $s = $asig.s + ";
-"; } | proc_call ';' { $s = $proc_call.s + ";
-"; };
+sent returns [String s]: asig ';' { $s = $asig.s + ";\n"; } | proc_call ';' { $s = $proc_call.s + ";\n"; };
 asig returns [String s]: ID ':=' exp { $s = $ID.text + " = " + $exp.s; };
 exp returns[String s]: factor exp_tail { $s = $factor.s + $exp_tail.s; };
 exp_tail returns[String s]: op factor exp_tail { $s = $op.s + $factor.s + $exp_tail.s; } | { $s = ""; };
