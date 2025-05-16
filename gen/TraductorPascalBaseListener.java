@@ -1,4 +1,4 @@
-// Generated from C:/Users/Alberto/OneDrive - Universidad Rey Juan Carlos/Documentos/Universidad - Sexto Curso/Segundo semestre/Procesadores de Lenguajes/Práctica Obligatoria/PracticaPL/src/TraductorPascal.g4 by ANTLR 4.13.2
+// Generated from C:/Users/alber/OneDrive - Universidad Rey Juan Carlos/Documentos/Universidad - Sexto Curso/Segundo semestre/Procesadores de Lenguajes/Práctica Obligatoria/PracticaPL/src/TraductorPascal.g4 by ANTLR 4.13.2
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -28,6 +28,30 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPrograma(TraductorPascalParser.ProgramaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrograma(TraductorPascalParser.ProgramaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLibreria(TraductorPascalParser.LibreriaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLibreria(TraductorPascalParser.LibreriaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBlq(TraductorPascalParser.BlqContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -47,18 +71,6 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDcllist(TraductorPascalParser.DcllistContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterSentlist(TraductorPascalParser.SentlistContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSentlist(TraductorPascalParser.SentlistContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -100,6 +112,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterCtelistP(TraductorPascalParser.CtelistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCtelistP(TraductorPascalParser.CtelistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterSimpvalue(TraductorPascalParser.SimpvalueContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -136,6 +160,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDefvarlistP(TraductorPascalParser.DefvarlistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDefvarlistP(TraductorPascalParser.DefvarlistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterVarlist(TraductorPascalParser.VarlistContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -143,6 +179,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitVarlist(TraductorPascalParser.VarlistContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVarlistP(TraductorPascalParser.VarlistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVarlistP(TraductorPascalParser.VarlistPContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -184,6 +232,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterFormal_param_tail(TraductorPascalParser.Formal_param_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFormal_param_tail(TraductorPascalParser.Formal_param_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterFormal_param(TraductorPascalParser.Formal_paramContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -208,6 +268,30 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSentlist(TraductorPascalParser.SentlistContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSentlist(TraductorPascalParser.SentlistContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSentlistP(TraductorPascalParser.SentlistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSentlistP(TraductorPascalParser.SentlistPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterSent(TraductorPascalParser.SentContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -215,6 +299,126 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSent(TraductorPascalParser.SentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBlq_or_sent(TraductorPascalParser.Blq_or_sentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBlq_or_sent(TraductorPascalParser.Blq_or_sentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIf_stmt(TraductorPascalParser.If_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIf_stmt(TraductorPascalParser.If_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWhile_stmt(TraductorPascalParser.While_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhile_stmt(TraductorPascalParser.While_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRepeat_stmt(TraductorPascalParser.Repeat_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRepeat_stmt(TraductorPascalParser.Repeat_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFor_stmt(TraductorPascalParser.For_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFor_stmt(TraductorPascalParser.For_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInc(TraductorPascalParser.IncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInc(TraductorPascalParser.IncContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpcond(TraductorPascalParser.ExpcondContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpcond(TraductorPascalParser.ExpcondContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOplog(TraductorPascalParser.OplogContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOplog(TraductorPascalParser.OplogContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFactorcond(TraductorPascalParser.FactorcondContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFactorcond(TraductorPascalParser.FactorcondContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOpcomp(TraductorPascalParser.OpcompContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOpcomp(TraductorPascalParser.OpcompContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -244,6 +448,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterExp_tail(TraductorPascalParser.Exp_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExp_tail(TraductorPascalParser.Exp_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterOp(TraductorPascalParser.OpContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -251,18 +467,6 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOp(TraductorPascalParser.OpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterOparit(TraductorPascalParser.OparitContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOparit(TraductorPascalParser.OparitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -299,6 +503,18 @@ public class TraductorPascalBaseListener implements TraductorPascalListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExplist(TraductorPascalParser.ExplistContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExplist_tail(TraductorPascalParser.Explist_tailContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExplist_tail(TraductorPascalParser.Explist_tailContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

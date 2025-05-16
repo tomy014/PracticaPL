@@ -1,4 +1,4 @@
-// Generated from C:/Users/Alberto/OneDrive - Universidad Rey Juan Carlos/Documentos/Universidad - Sexto Curso/Segundo semestre/Procesadores de Lenguajes/Práctica Obligatoria/PracticaPL/src/TraductorPascal.g4 by ANTLR 4.13.2
+// Generated from C:/Users/alber/OneDrive - Universidad Rey Juan Carlos/Documentos/Universidad - Sexto Curso/Segundo semestre/Procesadores de Lenguajes/Práctica Obligatoria/PracticaPL/src/TraductorPascal.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -16,6 +16,26 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPrg(TraductorPascalParser.PrgContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#programa}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrograma(TraductorPascalParser.ProgramaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#programa}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrograma(TraductorPascalParser.ProgramaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#libreria}.
+	 * @param ctx the parse tree
+	 */
+	void enterLibreria(TraductorPascalParser.LibreriaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#libreria}.
+	 * @param ctx the parse tree
+	 */
+	void exitLibreria(TraductorPascalParser.LibreriaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#blq}.
 	 * @param ctx the parse tree
@@ -36,16 +56,6 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDcllist(TraductorPascalParser.DcllistContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link TraductorPascalParser#sentlist}.
-	 * @param ctx the parse tree
-	 */
-	void enterSentlist(TraductorPascalParser.SentlistContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link TraductorPascalParser#sentlist}.
-	 * @param ctx the parse tree
-	 */
-	void exitSentlist(TraductorPascalParser.SentlistContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#dcl}.
 	 * @param ctx the parse tree
@@ -77,6 +87,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 */
 	void exitCtelist(TraductorPascalParser.CtelistContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#ctelistP}.
+	 * @param ctx the parse tree
+	 */
+	void enterCtelistP(TraductorPascalParser.CtelistPContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#ctelistP}.
+	 * @param ctx the parse tree
+	 */
+	void exitCtelistP(TraductorPascalParser.CtelistPContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#simpvalue}.
 	 * @param ctx the parse tree
 	 */
@@ -107,6 +127,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 */
 	void exitDefvarlist(TraductorPascalParser.DefvarlistContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#defvarlistP}.
+	 * @param ctx the parse tree
+	 */
+	void enterDefvarlistP(TraductorPascalParser.DefvarlistPContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#defvarlistP}.
+	 * @param ctx the parse tree
+	 */
+	void exitDefvarlistP(TraductorPascalParser.DefvarlistPContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#varlist}.
 	 * @param ctx the parse tree
 	 */
@@ -116,6 +146,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitVarlist(TraductorPascalParser.VarlistContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#varlistP}.
+	 * @param ctx the parse tree
+	 */
+	void enterVarlistP(TraductorPascalParser.VarlistPContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#varlistP}.
+	 * @param ctx the parse tree
+	 */
+	void exitVarlistP(TraductorPascalParser.VarlistPContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#defproc}.
 	 * @param ctx the parse tree
@@ -147,6 +187,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 */
 	void exitFormal_paramlist(TraductorPascalParser.Formal_paramlistContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#formal_param_tail}.
+	 * @param ctx the parse tree
+	 */
+	void enterFormal_param_tail(TraductorPascalParser.Formal_param_tailContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#formal_param_tail}.
+	 * @param ctx the parse tree
+	 */
+	void exitFormal_param_tail(TraductorPascalParser.Formal_param_tailContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#formal_param}.
 	 * @param ctx the parse tree
 	 */
@@ -167,6 +217,26 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 */
 	void exitTbas(TraductorPascalParser.TbasContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#sentlist}.
+	 * @param ctx the parse tree
+	 */
+	void enterSentlist(TraductorPascalParser.SentlistContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#sentlist}.
+	 * @param ctx the parse tree
+	 */
+	void exitSentlist(TraductorPascalParser.SentlistContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#sentlistP}.
+	 * @param ctx the parse tree
+	 */
+	void enterSentlistP(TraductorPascalParser.SentlistPContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#sentlistP}.
+	 * @param ctx the parse tree
+	 */
+	void exitSentlistP(TraductorPascalParser.SentlistPContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#sent}.
 	 * @param ctx the parse tree
 	 */
@@ -176,6 +246,106 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSent(TraductorPascalParser.SentContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#blq_or_sent}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlq_or_sent(TraductorPascalParser.Blq_or_sentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#blq_or_sent}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlq_or_sent(TraductorPascalParser.Blq_or_sentContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#if_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_stmt(TraductorPascalParser.If_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#if_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_stmt(TraductorPascalParser.If_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#while_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_stmt(TraductorPascalParser.While_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#while_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_stmt(TraductorPascalParser.While_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#repeat_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterRepeat_stmt(TraductorPascalParser.Repeat_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#repeat_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitRepeat_stmt(TraductorPascalParser.Repeat_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterFor_stmt(TraductorPascalParser.For_stmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#for_stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitFor_stmt(TraductorPascalParser.For_stmtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#inc}.
+	 * @param ctx the parse tree
+	 */
+	void enterInc(TraductorPascalParser.IncContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#inc}.
+	 * @param ctx the parse tree
+	 */
+	void exitInc(TraductorPascalParser.IncContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#expcond}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpcond(TraductorPascalParser.ExpcondContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#expcond}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpcond(TraductorPascalParser.ExpcondContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#oplog}.
+	 * @param ctx the parse tree
+	 */
+	void enterOplog(TraductorPascalParser.OplogContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#oplog}.
+	 * @param ctx the parse tree
+	 */
+	void exitOplog(TraductorPascalParser.OplogContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#factorcond}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactorcond(TraductorPascalParser.FactorcondContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#factorcond}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactorcond(TraductorPascalParser.FactorcondContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#opcomp}.
+	 * @param ctx the parse tree
+	 */
+	void enterOpcomp(TraductorPascalParser.OpcompContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#opcomp}.
+	 * @param ctx the parse tree
+	 */
+	void exitOpcomp(TraductorPascalParser.OpcompContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#asig}.
 	 * @param ctx the parse tree
@@ -197,6 +367,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 */
 	void exitExp(TraductorPascalParser.ExpContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#exp_tail}.
+	 * @param ctx the parse tree
+	 */
+	void enterExp_tail(TraductorPascalParser.Exp_tailContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#exp_tail}.
+	 * @param ctx the parse tree
+	 */
+	void exitExp_tail(TraductorPascalParser.Exp_tailContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#op}.
 	 * @param ctx the parse tree
 	 */
@@ -206,16 +386,6 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOp(TraductorPascalParser.OpContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link TraductorPascalParser#oparit}.
-	 * @param ctx the parse tree
-	 */
-	void enterOparit(TraductorPascalParser.OparitContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link TraductorPascalParser#oparit}.
-	 * @param ctx the parse tree
-	 */
-	void exitOparit(TraductorPascalParser.OparitContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#factor}.
 	 * @param ctx the parse tree
@@ -246,6 +416,16 @@ public interface TraductorPascalListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExplist(TraductorPascalParser.ExplistContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link TraductorPascalParser#explist_tail}.
+	 * @param ctx the parse tree
+	 */
+	void enterExplist_tail(TraductorPascalParser.Explist_tailContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link TraductorPascalParser#explist_tail}.
+	 * @param ctx the parse tree
+	 */
+	void exitExplist_tail(TraductorPascalParser.Explist_tailContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link TraductorPascalParser#proc_call}.
 	 * @param ctx the parse tree
